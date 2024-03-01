@@ -7,11 +7,14 @@ public class Task2_4 {
         Scanner n = new Scanner(System.in);
         int number = n.nextInt();
         boolean isPrime = true;
-        //int b = (int) Math.sqrt(number);
-        for (int i = 2; i<=Math.sqrt(number); i++) {
-            if (number % i == 0) {
-                isPrime = false;
-                break;
+        if (number < 2){
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
             }
         }
         if (isPrime) {
