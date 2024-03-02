@@ -7,21 +7,20 @@ public class Task2_9 {
         Scanner uLetter = new Scanner(System.in);
         while (true) {
             char userLetter = uLetter.next().charAt(0);
-            int numberOfUserLetter = (int)userLetter;
-            if (numberOfUserLetter < 65 || numberOfUserLetter > 122 || (numberOfUserLetter > 90 && numberOfUserLetter < 97)) {
+            if (userLetter < 65 || userLetter > 122 || (userLetter > 90 && userLetter < 97)) {
                 System.out.println("Введён недопустимый символ");
             } else {
-                if (numberOfUserLetter >= 97 && numberOfUserLetter <= 122) {
-                    numberOfUserLetter -= 32;
+                if (userLetter >= 97 && userLetter <= 122) {
+                    userLetter -= 32;
                 }
-                if (numberOfUserLetter == numberOfLetter) {
+                if (userLetter == numberOfLetter) {
                     System.out.println("Верно!");
                     break;
                 }
-                else if (numberOfUserLetter > numberOfLetter) {
+                else if (userLetter > numberOfLetter) {
                     System.out.println("Ищи букву, которая перед ней в алфавите");
                 }
-                else if (numberOfUserLetter < numberOfLetter) {
+                else if (userLetter < numberOfLetter) {
                     System.out.println("Ищи букву, которая после неё в алфавите");
                 }
             }
